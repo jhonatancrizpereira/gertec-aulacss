@@ -1,0 +1,87 @@
+/* 
+    Created on : 11/11/2015, 22:35:04
+    Author     : Aluno
+    CSS para impressão
+*/
+
+*{margin:0; padding: 0;}/*reset*/
+body{
+    background-color: white;
+    color: black;
+}
+h1{color: black;}
+header{
+    display: none;
+}
+section{
+    
+    padding: 20px;
+    position: relative;
+    z-index: -2;
+}
+
+footer{    
+    background-color: white;
+    color:black;    
+}
+
+/*Classe*/
+.qdo{
+    border: 1px solid black;
+    width: 100px; height: 100px;
+    position: absolute;
+    margin: 20px;
+}
+
+.final{clear: both;}
+
+@media print{
+    /*Identificadores - ID*/
+    #absrel{
+        background-color: deeppink;
+        width: 500px; height: 500px;
+        position: relative;
+        /*Joga para trás*/
+        z-index: -1;
+        /*Centraliza a div*/
+        display: block;
+        margin: 0 auto;
+    }
+
+    #quadrado1{background-color: red;
+               bottom: 20px; right: 50px;
+    }
+    #quadrado2{background-color: green;
+               top: 100px; left: 100px;
+    }
+    #quadrado3{background-color: blue;
+               top: 150px; left: 150px;
+    }
+}
+
+#topo{background-color: yellow;}
+
+@media print and (orientation: landscape){
+    /*Paisagem - Horizontal*/
+    #paisagem{
+        display: block;
+        width: 140px;
+        height: 100px;
+        background-color: yellow;
+    }
+    #retrato{display: none;}
+}
+
+@media print and (orientation: portrait){
+    /*Retrato - Vertical*/
+    #paisagem{display: none;}
+    #retrato{
+        display: block;
+        width: 100px;
+        height: 140px;
+        background-color: yellow;
+    }
+}
+
+br{display: none;}
+

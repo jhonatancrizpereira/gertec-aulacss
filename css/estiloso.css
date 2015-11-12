@@ -47,24 +47,110 @@ footer{
 
 .final{clear: both;}
 
-/*Identificadores - ID*/
-#absrel{
-    background-color: deeppink;
-    width: 500px; height: 500px;
-    position: relative;
-    /*Joga para trás*/
-    z-index: -1;
-    /*Centraliza a div*/
-    display: block;
-    margin: 0 auto;
+@media screen and (min-width: 1023px){
+    /*Identificadores - ID*/
+    #absrel{
+        background-color: deeppink;
+        width: 500px; height: 500px;
+        position: relative;
+        /*Joga para trás*/
+        z-index: -1;
+        /*Centraliza a div*/
+        display: block;
+        margin: 0 auto;
+    }
+
+    #quadrado1{background-color: red;
+               bottom: 20px; right: 50px;
+    }
+    #quadrado2{background-color: green;
+               top: 100px; left: 100px;
+    }
+    #quadrado3{background-color: blue;
+               top: 150px; left: 150px;
+    }
 }
 
-#quadrado1{background-color: red;
-           bottom: 20px; right: 50px;
+@media screen and (min-width: 667px)
+and (max-width: 1023px){
+    /*Identificadores - ID*/
+    #absrel{
+        background-color: yellow;
+        width: 300px; height: 300px;
+        position: relative;
+        /*Joga para trás*/
+        z-index: -1;
+        /*Centraliza a div*/
+        display: block;
+        margin: 0 auto;
+    }
+
+    .qdo{width: 50px; height: 50px;}
+
+    #quadrado1{background-color: red;
+               bottom: 10px; right: 10px;
+    }
+    #quadrado2{background-color: green;
+               top: 10px; left: 10px;
+    }
+    #quadrado3{background-color: blue;
+               top: 150px; left: 150px;
+    }
+
+    footer{width: 80px; padding: 40px 0; background-color: lightcoral;}
+
 }
-#quadrado2{background-color: green;
-           top: 100px; left: 100px;
+
+@media screen and (max-width: 666px){
+    /*Identificadores - ID*/
+    #absrel{
+        background-color: orange;
+        width: 150px; height: 150px;
+        position: relative;
+        /*Joga para trás*/
+        z-index: -1;
+        /*Centraliza a div*/
+        display: block;
+        margin: 0 auto;
+    }
+
+    .qdo{width: 20px; height: 20px;}
+
+    #quadrado1{background-color: red;
+               bottom: 10px; right: 10px;
+    }
+    #quadrado2{background-color: green;
+               top: 10px; left: 10px;
+    }
+    #quadrado3{background-color: blue;
+               top: 50px; left: 50px;
+    }
+
+    footer{display: none;}
 }
-#quadrado3{background-color: blue;
-           top: 150px; left: 150px;
+
+
+
+#topo{background-color: maroon;}
+
+@media screen and (orientation: landscape){
+    /*Paisagem - Horizontal*/
+    #paisagem{
+        display: block;
+        width: 140px;
+        height: 100px;
+        background-color: yellow;
+    }
+    #retrato{display: none;}
+}
+
+@media screen and (orientation: portrait){
+    /*Paisagem - Vertical*/
+    #paisagem{display: none;}
+    #retrato{
+        display: block;
+        width: 100px;
+        height: 140px;
+        background-color: yellow;
+    }
 }
